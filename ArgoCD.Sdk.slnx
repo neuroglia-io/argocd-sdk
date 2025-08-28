@@ -11,6 +11,9 @@
     <File Path=".github/workflows/publish.yml" />
     <File Path=".github/workflows/test.yml" />
   </Folder>
+  <Folder Name="/assets/">
+    <File Path="assets/oas.json" />
+  </Folder>
   <Folder Name="/docs/">
     <File Path="CODE_OF_CONDUCT.md" />
     <File Path="CONTRIBUTING.md" />
