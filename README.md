@@ -9,14 +9,10 @@ A .NET SDK for interacting with the [ArgoCD](https://argo-cd.readthedocs.io/) AP
 
 ## ✨ Features
 
-- Strongly-typed client for the ArgoCD REST API
-- Easy authentication (JWT, session tokens, gRPC/web)
-- Models aligned with ArgoCD API schemas
-- High-level abstractions for common GitOps operations:
-  - Managing applications
-  - Syncing and rolling back
-  - Accessing projects, clusters, and repositories
-- Built for .NET 6.0+ (compatible with .NET 7/8)
+- Strongly-typed client for the [ArgoCD REST API](https://argo-cd.readthedocs.io/en/latest/developer-guide/api-docs/)
+- Easy authentication
+- Generated using [Microsoft Kiota](https://github.com/microsoft/kiota) from the [ArgoCD](https://argo-cd.readthedocs.io/) [OpenAPI specification](https://www.openapis.org/) file
+- Built for .NET 8.0+ (compatible with .NET 8/9)
 
 ---
 
@@ -31,29 +27,14 @@ dotnet add package ArgoCD.Sdk
 ## 🚀 Getting Started
 
 ```c#
-using ArgoCD.Sdk;
-using ArgoCD.Sdk.Models;
-
-// Create client
-var client = new ArgoCDClient("https://argocd.example.com", new ArgoCDOptions
+...
+builder.Services.AddArgoCDClient(options => 
 {
-    Token = "your-jwt-token"
+  options.Endpoint = new("https://argocd.contoso.com");
+  options.ApiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9eyJpc3MiOiJhcmdvY2QiLC";
 });
-
-// List applications
-var apps = await client.Applications.ListAsync();
-foreach (var app in apps)
-{
-    Console.WriteLine($"App: {app.Metadata.Name}, Status: {app.Status.Health.Status}");
-}
+...
 ```
-
-## ⚡ Roadmap
-
-- [ ] Support gRPC endpoints
-- [ ] Integration with Kubernetes SDK
-- [ ] Advanced queries & filters
-- [ ] Example ASP.NET Core middleware for GitOps automation
 
 ---
 
@@ -66,7 +47,7 @@ Please check out our [contribution guide](./CONTRIBUTING.md) for guidelines on h
 
 ## 📄 License
 
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed under the [Apache-2.0 License](./LICENSE).
 
 ---
 
