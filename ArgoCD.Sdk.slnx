@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ArgoCD.Sdk/ArgoCD.Sdk.csproj" Id="3f732fb4-2ab7-4303-9cea-48c4bf30ce92" />
+  </Folder>
+</Solution>
