@@ -4,7 +4,6 @@ A .NET SDK for interacting with the [ArgoCD](https://argo-cd.readthedocs.io/) AP
 
 [![NuGet](https://img.shields.io/nuget/v/ArgoCD.Sdk.svg)](https://www.nuget.org/packages/ArgoCD.Sdk/) 
 [![License](https://img.shields.io/github/license/neuroglia-io/argocd-sdk.svg)](./LICENSE)
-[![Build](https://github.com/neuroglia-io/argocd-sdk/actions/workflows/build.yml/badge.svg)](https://github.com/neuroglia-io/argocd-sdk/actions)
 
 ---
 
